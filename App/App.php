@@ -20,10 +20,12 @@ class App
         define('APP_HOST', $_SERVER['HTTP_HOST'] . '/apiGithub');
         define('PATH', realpath('./'));
         define('TITLESITE', "Api Github");
+        define('TOKEN', "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");
+        define('USERNAME', "mateusmrosa");
 
         $this->url();
 
-        $gitHubRepository = new GitHubRepository("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", "mateusmrosa");
+        $gitHubRepository = new GitHubRepository(TOKEN, USERNAME);
         $gitHubRepositoryService = new GitHubRepositoryService($gitHubRepository);
 
         $this->gitHubRepositoryController = new GitHubRepositoryController($gitHubRepositoryService);
