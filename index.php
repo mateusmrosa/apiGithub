@@ -1,22 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exibição de Repositórios GitHub</title>
+<?php
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+use App\App;
+use App\Lib\Erro;
 
-<div class="container mt-4">
-    <div class="row">
-        <div class="col">
-            <?php include 'repositories.php'; ?>
-        </div>
-    </div>
-</div>
+session_start();
 
-</body>
-</html>
+error_reporting(E_ALL & ~E_NOTICE); 
+
+require_once("vendor/autoload.php");
+
+try {
+    $app = new App();
+    $app->run();
+}catch (\Exception $e){
+    $oError = new Erro($e);
+    $oError->render();
+}
+
+
