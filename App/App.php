@@ -23,7 +23,7 @@ class App
 
         $this->url();
 
-        $gitHubRepository = new GitHubRepository("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", "mateusmrosa");
+        $gitHubRepository = new GitHubRepository("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", "mateusmrosa");
         $gitHubRepositoryService = new GitHubRepositoryService($gitHubRepository);
 
         $this->gitHubRepositoryController = new GitHubRepositoryController($gitHubRepositoryService);
