@@ -1,7 +1,7 @@
 # apiGithub
 Desafio Dev Fullstack PHP
 
-- Colocar informações enviadas no whatsapp no arquivo App/app.js
+- Colocar informações enviadas no whatsapp no arquivo App/app.php
    - token: 
    - username: 
 
