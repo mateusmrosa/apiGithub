@@ -20,8 +20,8 @@ class App
         define('APP_HOST', $_SERVER['HTTP_HOST'] . '/apiGithub');
         define('PATH', realpath('./'));
         define('TITLESITE', "Api Github");
-        define('TOKEN', "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");
-        define('USERNAME', "mateusmrosa");
+        define('TOKEN', ""); 
+        define('USERNAME', "");
 
         $this->url();
 
